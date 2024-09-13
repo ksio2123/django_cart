@@ -10,6 +10,7 @@ from rest_framework.permissions import IsAuthenticated, BasePermission
 # Create your views here.
 from rest_framework import generics
 from rest_framework.views import APIView
+from rest_framework.filters import OrderingFilter
 from .models import Cart, MenuItem, Order, OrderItem
 from .serializers import CartSerializer, MenuItemSerializer, OrderItemSerializer, OrderSerializer, UserSerializer
 from django_filters.rest_framework import DjangoFilterBackend
@@ -23,8 +24,13 @@ class IsManager(BasePermission):
 class MenuItemsView(generics.ListCreateAPIView):
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['category', 'featured', 'price']
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filterset_fields = {
+        'price': ['exact', 'lte', 'gte'],
+        'category': ['exact'],
+        'featured': ['exact']
+    }
+    ordering_fields = ['price', 'category']
 
     def get_permissions(self):
         if (self.request.method == 'GET'):
