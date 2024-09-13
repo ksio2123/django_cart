@@ -14,6 +14,7 @@ from rest_framework.filters import OrderingFilter
 from .models import Cart, MenuItem, Order, OrderItem
 from .serializers import CartSerializer, MenuItemSerializer, OrderItemSerializer, OrderSerializer, UserSerializer
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.throttling import UserRateThrottle, AnonRateThrottle
 
 
 class IsManager(BasePermission):
@@ -22,6 +23,7 @@ class IsManager(BasePermission):
 
 
 class MenuItemsView(generics.ListCreateAPIView):
+    throttle_classes = [AnonRateThrottle, UserRateThrottle]
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
     filter_backends = [DjangoFilterBackend, OrderingFilter]
