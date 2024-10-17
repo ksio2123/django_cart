@@ -1,4 +1,4 @@
-This is a sample porject that sets up REST endpoints for a shopping cart system for a restaurant complete with: 
+This is a sample project that sets up REST endpoints for a shopping cart system for a restaurant complete with: 
 - Managers that can add items
 - Customers that can add items to a shopping cart and create an order
 - Delivery Crew to deliever the order
