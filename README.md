@@ -1,13 +1,7 @@
-User groups
-Create the following two user groups and then create some random users and assign them to these groups from the Django admin panel. 
-
- Manager
-
-Delivery crew
-
-Users not assigned to a group will be considered customers. Review the video about 
-User roles
-.
+This is a sample porject that sets up REST endpoints for a shopping cart system for a restaurant complete with: 
+- Managers that can add items
+- Customers that can add items to a shopping cart and create an order
+- Delivery Crew to deliever the order
 
 <table><thead><tr><th scope="col"><p><span><strong><span>HTTP Status code</span></strong></span></p></th><th scope="col"><p><span><strong><span>Reason</span></strong></span></p></th></tr></thead><tbody><tr><td><p><span><var><span>200 - Ok</span></var></span></p></td><td><p><span><span>For all successful </span></span><span><var><span>GET</span></var></span><span><span>, </span></span><span><var><span>PUT</span></var></span><span><span>, </span></span><span><var><span>PATCH</span></var></span><span><span> and </span></span><span><var><span>DELETE </span></var></span><span><span>calls</span></span></p></td></tr><tr><td><p><span><var><span>201 - Created</span></var></span></p></td><td><p><span><span>For all successful </span></span><span><var><span>POST</span></var></span><span><span> requests</span></span></p></td></tr><tr><td><p><span><var><span>403 - Unauthorized</span></var></span></p></td><td><p><span><span>If authorization fails for the current user token</span></span></p></td></tr><tr><td><p><span><var><span>401 – Forbidden</span></var></span></p></td><td><p><span><span>If user authentication fails</span></span></p></td></tr><tr><td><p><span><var><span>400 – Bad request</span></var></span></p></td><td><p><span><span>If validation fails for </span></span><span><var><span>POST</span></var></span><span><span>, </span></span><span><var><span>PUT</span></var></span><span><span>, </span></span><span><var><span>PATCH</span></var></span><span><span> and </span></span><span><var><span>DELETE</span></var></span><span><span> calls</span></span></p></td></tr><tr><td><p><span><var><span>404 – Not found</span></var></span></p></td><td><p><span><span>If the request was made for a non-existing resource</span></span></p></td></tr></tbody></table>
 
