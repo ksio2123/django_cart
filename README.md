@@ -69,9 +69,3 @@ This project sets up REST endpoints for a shopping cart system for a restaurant.
 1. Access the API endpoints to interact with the shopping cart system.
 2. Use appropriate permissions for different user roles (customer, manager, delivery crew).
 3. Test the functionality of adding items to the cart, creating orders, and managing menu items.
-
-## Contributors
-- [Your Name](https://github.com/yourusername)
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
